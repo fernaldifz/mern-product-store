@@ -97,7 +97,7 @@ function EditProduct() {
       <div className="submit-form">
         {submitted ? (
           <div>
-            <h4>Product edited!</h4>{" "}
+            <h4 className="mb-4">Product edited!</h4>
             <Link to={"/product_detail/" + id} className="btn btn-success">
               Back to Products Detail
             </Link>
