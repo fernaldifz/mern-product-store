@@ -71,7 +71,7 @@ function AddProduct() {
     <div className="submit-form">
       {submitted ? (
         <div>
-          <h4>Product added!</h4>{" "}
+          <h4 className="mb-4">Product added!</h4>{" "}
           <Link to={"/"} className="btn btn-success">
             Back to Products List
           </Link>
