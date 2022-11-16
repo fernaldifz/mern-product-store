@@ -60,7 +60,7 @@ function ProductDetail() {
             />
             <div className="card-body">
               <h4 className="card-title">{product.name}</h4>
-              <p className="card-text">
+              <div className="card-text mb-4">
                 <div>
                   <strong>Category: </strong>
                   {product.category}
@@ -81,7 +81,7 @@ function ProductDetail() {
                   <strong>Description: </strong>
                   {product.description}
                 </div>
-              </p>
+              </div>
 
               <div className="row d-flex justify-content-around">
                 <Link
