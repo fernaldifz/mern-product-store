@@ -120,7 +120,6 @@ export default class ProductsController {
   static async apiDeleteProduct(req, res, next) {
     try {
       const id = req.query._id;
-      console.log(id);
       const productResponse = await ProductsDAO.deleteProduct(id);
       res.json({ status: "success" });
     } catch (e) {
