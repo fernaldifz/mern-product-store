@@ -151,9 +151,9 @@ function ProductsList() {
           </div>
           <div className="input-group col-lg-4 mb-4">
             <select onChange={onChangeSearchCategory}>
-              {categories.map((category) => {
+              {categories.map((category, idx) => {
                 return (
-                  <option value={category}>{category.substring(0, 20)}</option>
+                  <option key={idx} value={category}>{category.substring(0, 20)}</option>
                 );
               })}
             </select>
