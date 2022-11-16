@@ -14,6 +14,7 @@ function EditProduct() {
   const [likes, setLikes] = useState(0);
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [submitClicked, setSubmitClicked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -64,6 +65,7 @@ function EditProduct() {
   };
 
   const updateProduct = () => {
+    setSubmitClicked(true);
     const product = new FormData();
     const productDate = new Date();
 
@@ -163,6 +165,7 @@ function EditProduct() {
                 />
                 <label htmlFor="formFile" className="form-label mb-2">
                   Image
+                  <span className="text-danger">*</span>
                 </label>
                 <div className="form-group">
                   <input
@@ -173,6 +176,7 @@ function EditProduct() {
                     onChange={handleImageChange}
                   ></input>
                 </div>
+                {submitClicked && document.getElementById("image").value === "" && <div className="text-danger">Image is empty</div>}
               </div>
             </form>
             <div className="mt-4">
