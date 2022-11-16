@@ -192,25 +192,29 @@ function ProductsList() {
             );
           })}
         </div>
-        <div className="d-flex justify-content-between mb-4">
-          {previousPage ? (
-            <button
-              className="btn btn-primary active"
-              onClick={goToPreviousPage}
-            >
-              Previous
-            </button>
-          ) : (
-            <button className="btn btn-primary disabled">Previous</button>
-          )}
-          {nextPage ? (
-            <button className="btn btn-primary active" onClick={goToNextPage}>
-              Next
-            </button>
-          ) : (
-            <button className="btn btn-primary disabled">Next</button>
-          )}
-        </div>
+        {products.length !== 0 ?
+          <div className="d-flex justify-content-between mb-4">
+            {previousPage ? (
+              <button
+                className="btn btn-primary active"
+                onClick={goToPreviousPage}
+              >
+                Previous
+              </button>
+            ) : (
+              <button className="btn btn-primary disabled">Previous</button>
+            )}
+            {nextPage ? (
+              <button className="btn btn-primary active" onClick={goToNextPage}>
+                Next
+              </button>
+            ) : (
+              <button className="btn btn-primary disabled">Next</button>
+            )}
+          </div>
+          :
+          <h5 className="mt-2">Product List is empty</h5>
+        }
       </div>
     );
   }
