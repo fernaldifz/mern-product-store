@@ -135,7 +135,7 @@ function ProductsList() {
     return (
       <div>
         <div className="row">
-          <div className="input-group col-lg-4 mb-2">
+          <div className="input-group mb-2">
             <input
               type="text"
               className="form-control"
@@ -149,7 +149,7 @@ function ProductsList() {
               </div>
             </div>
           </div>
-          <div className="input-group col-lg-4 mb-4">
+          <div className="input-group mb-4">
             <select onChange={onChangeSearchCategory}>
               {categories.map((category, idx) => {
                 return (
@@ -167,7 +167,7 @@ function ProductsList() {
         <div className="row">
           {products.map((product) => {
             return (
-              <div className="col-lg-3 pb-1 mb-5" key={product._id}>
+              <div className="col-12 col-sm-6 col-lg-4 col-xl-3 pb-1 mb-5" key={product._id}>
                 <div className="card">
                   <img
                     className="card-img-top"
